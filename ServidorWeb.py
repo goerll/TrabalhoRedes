@@ -4,13 +4,13 @@ import socket
 # Cria um socket TCP (socket.AF_INET) para comunicação de rede
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Define a porta que o servidor irá escutar
-port = 6789
+PORT = 6789
 # Associa o socket a um endereço IP e porta específicos (nesse caso,
 # o servidor escuta em todas as interfaces de rede na porta 6789)
-server.bind(("", port))
+server.bind(("", PORT))
 # Coloca o servidor em modo de escuta
 server.listen(1)
-print(f"Servidor rodando na porta {port}...")
+print(f"Servidor rodando na porta {PORT}...")
 
 while True:
     try:
